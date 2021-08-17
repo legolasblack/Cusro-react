@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--hoja de estilos-->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+            var template = document.getElementById("article-template");
+            var articles=document.getElementById("articles");
+
+            for (i = 0; i <= 5; i++) {
+                var clonado = template.cloneNode(true);
+                clonado.removeAttribute("id");
+                articles.appendChild(clonado);
+                
+            }
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="center">
+            <!--LOGO-->
+            <div id="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-negro.png" class="app-logo" alt="Logotipo">
+                    <span id="brand">
+                        <strong>MAP </strong>
+                    </span></a>
+            </div>
+
+            <!--MENU DE NAVEGACION-->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Plantas</a>
+                    </li>
+                    <li>
+                        <a href="#">Peces</a>
+                    </li>
+                    <li>
+                        <a href="contact-form.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--div para dividir y limpiar las areas flotantes libres-->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <div id="slider" class="slider-small">
+        <h1>Nos importa tu opinion</h1>
+    </div>
+    <div class="clearfix"></div>
+    <div class="center">
+        <section id="content">
+            <h2>Ultimos articulos</h2>
+
+
+            <!--listado de articulos-->
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="https://aquascaping.pro/wp-content/uploads/2020/03/que_es_aquascaping_luis_cardoso-1024x480.jpg"
+                            alt="que_es_aquascaping_luis_cardoso-1024x480">
+                    </div>
+                    <h2>Articulo de prueba </h2>
+                    <span class="date">
+                        Hace 5 minutos
+                    </span>
+                    <a href="#">Leer mas</a>
+                </article>
+                <!--articulos via js-->
+            </div>
+
+        </section>
+
+
+        <aside id="sidebar">
+
+
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Crea aqui tus post</h3>
+                <a href="#" class="btn btn-sucess">Crear articulo</a>
+            </div>
+
+
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el articulo que buscas</p>
+                <form>
+                    <input type="text" name="search">
+                    <input type="submit" name="search" value="Buscar" class="btn">
+                </form>
+            </div>
+
+
+        </aside>
+        <div class="clearfix"></div>
+
+    </div>
+
+    <footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Master en Framewoks curso react
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+<!--  codigo del carrucel
+
+    <div class="slide">
+			<div class="slide-inner">
+				<input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+				<div class="slide-item">
+					<img src="https://www.migueltroyano.com/wp-content/uploads/2020/10/embeddingApi_7.jpg">
+				</div>
+				<input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/postgres_copy.png">
+				</div>
+				<input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/excel_guardar_como_csv.jpg">
+				</div>
+				<label for="slide-3" class="slide-control prev control-1">‹</label>
+				<label for="slide-2" class="slide-control next control-1">›</label>
+				<label for="slide-1" class="slide-control prev control-2">‹</label>
+				<label for="slide-3" class="slide-control next control-2">›</label>
+				<label for="slide-2" class="slide-control prev control-3">‹</label>
+				<label for="slide-1" class="slide-control next control-3">›</label>
+				<ol class="slide-indicador">
+					<li>
+						<label for="slide-1" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-2" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-3" class="slide-circulo">•</label>
+					</li>
+				</ol>
+	    </div>
+    </div>
+-->
