@@ -1,0 +1,29 @@
+{
+    "Frameworks":[
+        {
+            "id":1,
+            "name":"React",
+            "web":"https://es.react.dev/"
+        },
+        {
+            "id":2,
+            "name":"Angular",
+            "web":"https://angular.io/"
+        },
+        {
+            "id":3,
+            "name":"Node.js",
+            "web":"https://nodejs.org/en"
+        },
+        {
+            "id":4,
+            "name":"React native ",
+            "web":"https://reactnative.dev/"
+        },
+        {
+            "id":5,
+            "name":"Laravel",
+            "web":"https://laravel.com/"
+        }
+    ]
+}
