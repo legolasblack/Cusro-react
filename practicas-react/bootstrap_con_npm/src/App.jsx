@@ -8,6 +8,7 @@ import ComponenteFunctionSintaxis from './componentes/ComponenteFunctionSintaxis
 import ComponenteArrowSintaxis from './componentes/ComponenteArrowSintaxis';
 import ManejoEstados from './componentes/ManejoEstados';
 import Renderizadocondicional from './componentes/Renderizadocondicional';
+import ManejodeJson from './componentes/ManejodeJson';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <ComponenteArrowSintaxis msg="holi desde el padre de la constante"></ComponenteArrowSintaxis>
         <ManejoEstados></ManejoEstados>
         <Renderizadocondicional></Renderizadocondicional>
+        <ManejodeJson></ManejodeJson>
       </div>
 
     </div>

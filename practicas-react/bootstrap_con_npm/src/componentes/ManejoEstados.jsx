@@ -8,12 +8,12 @@ class ManejoEstados extends Component {
             contador:0,
         };
 
-        setInterval(() => {
+       /*  setInterval(() => {
             this.setState({
                 contador:this.state.contador+1
             });
             
-        }, 1000);
+        }, 1000); */
     }
   render() {
     return (
@@ -29,3 +29,10 @@ class ManejoEstados extends Component {
 }
 
 export default ManejoEstados;
+
+
+{
+  /* para poder correr este modulo es necesario descomentar la funcion set interval 
+  se procede a comentar porque genera un warning, dado a que el estado no debe 
+  de ser manipulado de un contenedor que no a sido montado */
+}
