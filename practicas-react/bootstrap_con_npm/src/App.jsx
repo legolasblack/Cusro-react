@@ -9,6 +9,7 @@ import ComponenteArrowSintaxis from './componentes/ComponenteArrowSintaxis';
 import ManejoEstados from './componentes/ManejoEstados';
 import Renderizadocondicional from './componentes/Renderizadocondicional';
 import ManejodeJson from './componentes/ManejodeJson';
+import ManejodeEventosClass from './componentes/ManejodeEventosClass';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <ManejoEstados></ManejoEstados>
         <Renderizadocondicional></Renderizadocondicional>
         <ManejodeJson></ManejodeJson>
+        <ManejodeEventosClass></ManejodeEventosClass>
       </div>
 
     </div>
