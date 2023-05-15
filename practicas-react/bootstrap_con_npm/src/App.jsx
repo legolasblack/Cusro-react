@@ -10,6 +10,7 @@ import ManejoEstados from './componentes/ManejoEstados';
 import Renderizadocondicional from './componentes/Renderizadocondicional';
 import ManejodeJson from './componentes/ManejodeJson';
 import ManejodeEventosClass from './componentes/ManejodeEventosClass';
+import Hooks from './componentes/Hooks';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <ManejodeJson></ManejodeJson>
         <ManejodeEventosClass></ManejodeEventosClass>
       </div>
+
+      <hr />
+      <h1>Componentes en basea hooks</h1>
+      <Hooks/>
 
     </div>
   );
