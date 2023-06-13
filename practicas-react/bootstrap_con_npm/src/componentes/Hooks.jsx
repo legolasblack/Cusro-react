@@ -3,20 +3,31 @@
 import React, {useState} from 'react'
 import Swal from 'sweetalert2';
 
-export default function Hooks() {
-    const[contador, setContador]=useState(0);
+export default function Hooks(props) {
+    const[contador, setContador]=useState(1);
     /* const[contador2, setContador2]=useState(10); */
 
-    const sumar =()=> setContador(contador+1);
+    const sumar =()=> {
+      let maximo_art=props.maximo;
+      if (contador>=maximo_art ){
+        Swal.fire({
+          icon:'error',
+          titlle: 'Oops....',
+          text: 'El numero de Articulos no puede ser mayor a  '+maximo_art+'!'
+        })
+      }else {
+        setContador(contador+1)
+      }
+    };
     const restar=()=> {
-      if(contador>0){
+      if(contador>1){
         setContador(contador-1)
 
       }else{
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'El numero de Articulos no puede ser menor a 0!'
+          text: 'El numero de Articulos no puede ser 0!'
         })
       }
     };

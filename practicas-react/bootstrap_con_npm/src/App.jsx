@@ -13,6 +13,7 @@ import ManejodeEventosClass from './componentes/ManejodeEventosClass';
 import Hooks from './componentes/Hooks';
 
 function App() {
+  let max_art=5
   return (
     <div className="App">
       <div className="container">
@@ -33,7 +34,7 @@ function App() {
 
       <hr />
       <h1>Componentes en basea hooks</h1>
-      <Hooks/>
+      <Hooks maximo={max_art} />
 
     </div>
   );
