@@ -11,6 +11,7 @@ import Renderizadocondicional from './componentes/Renderizadocondicional';
 import ManejodeJson from './componentes/ManejodeJson';
 import ManejodeEventosClass from './componentes/ManejodeEventosClass';
 import Hooks from './componentes/Hooks';
+import HooksEffect from './componentes/HooksEffect';
 
 function App() {
   let max_art=5
@@ -30,12 +31,14 @@ function App() {
         <Renderizadocondicional></Renderizadocondicional>
         <ManejodeJson></ManejodeJson>
         <ManejodeEventosClass></ManejodeEventosClass>
+        
       </div>
 
       <hr />
       <h1>Componentes en basea hooks</h1>
       <Hooks maximo={max_art} />
 
+      <HooksEffect></HooksEffect>
     </div>
   );
 }
