@@ -46,6 +46,9 @@ export default function HooksEffect() {
     )
   },[urlApiRastreomasGuia])
 
+
+  
+
   useEffect(() => {
     fetch(urlApiPokemon)
       .then((response) => {
@@ -69,7 +72,7 @@ export default function HooksEffect() {
    
     <>
    
-  <h1>hello word</h1>
+  <h1>Rastreo de guia:</h1>
   <h1>{historialGuia.Guias[0].RastreoDetalle[4].Descripcion}</h1>
   </>
   )
