@@ -29,13 +29,13 @@ export default function HooksEffect() {
   let urlApiRastreomasGuia= urlApiRastreo+guia;
 
 
-  
+
 
   //eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(()=>{
     fetch(urlApiRastreomasGuia).then((resp)=>{
       return resp.json()
-      ;
+        ;
     }).then((data)=>{
       console.log(data);
       console.log('se updetio el componente desde guias ');
@@ -44,10 +44,7 @@ export default function HooksEffect() {
     }).catch(
       ()=>console.log('Error al cargar el rastreo ')
     )
-  },[urlApiRastreomasGuia])
-
-
-  
+  }, [urlApiRastreomasGuia])
 
   useEffect(() => {
     fetch(urlApiPokemon)
@@ -57,26 +54,25 @@ export default function HooksEffect() {
       .then((pok) => {
         console.log('se updetio el componente desde pokemon ');
         setPokemon(pok)
-      }).catch(()=>{
+      }).catch(() => {
         console.log('Error al consultar la api pokemon ')
       })
   }, [urlApiPokemon])
 
 
 
-  if (recuperado)
- {
-  console.log(pokemon)
-  console.log(historialGuia)
-  return(
-   
-    <>
-   
-  <h1>Rastreo de guia:</h1>
-  <h1>{historialGuia.Guias[0].RastreoDetalle[4].Descripcion}</h1>
-  </>
-  )
- }
+  if (recuperado) {
+    console.log(pokemon)
+    console.log(historialGuia)
+    return (
+
+      <>
+
+        <h1>hello word</h1>
+        <h1>{historialGuia.Guias[0].RastreoDetalle[4].Descripcion}</h1>
+      </>
+    )
+  }
   else
     return (<div>recuperando datos...</div>)
 }

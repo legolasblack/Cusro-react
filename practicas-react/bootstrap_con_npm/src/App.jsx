@@ -12,6 +12,7 @@ import ManejodeJson from './componentes/ManejodeJson';
 import ManejodeEventosClass from './componentes/ManejodeEventosClass';
 import Hooks from './componentes/Hooks';
 import HooksEffect from './componentes/HooksEffect';
+import HooksContext from './componentes/HooksContext';
 
 function App() {
   let max_art=5
@@ -39,6 +40,8 @@ function App() {
       <Hooks maximo={max_art} />
 
       <HooksEffect></HooksEffect>
+      <hr/>
+      <HooksContext></HooksContext>
     </div>
   );
 }
