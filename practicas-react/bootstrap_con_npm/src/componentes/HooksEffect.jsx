@@ -19,30 +19,30 @@ export default function HooksEffect() {
 
   const [pokemon, setPokemon] = useState([])
   const [recuperado, setRecuperado] = useState(false)
-  const [historialGuia, setHistorialGuia]= useState([])
+  const [historialGuia, setHistorialGuia] = useState([])
 
   let urlApiPokemon = 'https://pokeapi.co/api/v2/pokemon/snorlax';
   let urlApiRastreo = 'http://216.250.126.250/Rastreo_Get_Guias/';
-  let prefijo='per-';
-  let numguia=80552;
-  let guia= prefijo + numguia; 
-  let urlApiRastreomasGuia= urlApiRastreo+guia;
+  let prefijo = 'per-';
+  let numguia = 80552;
+  let guia = prefijo + numguia;
+  let urlApiRastreomasGuia = urlApiRastreo + guia;
 
 
 
 
   //eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(()=>{
-    fetch(urlApiRastreomasGuia).then((resp)=>{
+  useEffect(() => {
+    fetch(urlApiRastreomasGuia).then((resp) => {
       return resp.json()
         ;
-    }).then((data)=>{
-      console.log(data);
+    }).then((data) => {
+      /* console.log(data); */
       console.log('se updetio el componente desde guias ');
       setHistorialGuia(data);
       setRecuperado(true);
     }).catch(
-      ()=>console.log('Error al cargar el rastreo ')
+      () => console.log('Error al cargar el rastreo ')
     )
   }, [urlApiRastreomasGuia])
 
@@ -63,11 +63,10 @@ export default function HooksEffect() {
 
   if (recuperado) {
     console.log(pokemon)
-    console.log(historialGuia)
+   /*  console.log(historialGuia) */
     return (
 
       <>
-
         <h1>hello word</h1>
         <h1>{historialGuia.Guias[0].RastreoDetalle[4].Descripcion}</h1>
       </>

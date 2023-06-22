@@ -7,25 +7,42 @@ consiste en hacer un stock de variables globales que puedn funcionar como estado
 
 import React from 'react'
 import { createContext } from 'react';
-import {  useState } from 'react'
+import { useState, useEffect } from 'react'
 import data from '../Json/data.json'
 import HooksContext2 from './HooksContext2';
+import Swal from 'sweetalert2';
 
-export const localContext= createContext();
+export const userContext = createContext();
 
 export default function HooksContext() {
-  const [datos, setData]= useState(data);
-  
-/*   const updateData=(newData)=>{
-    setData(newData)
-  } */
-  
+
+  const [userState, setUserState] = useState(null)
+  let urlinfo='https://pokeapi.co/api/v2/pokemon/snorlax';
+  useEffect(() => {
+
+
+    fetch(urlinfo).then((resp) => {
+      return resp.json()
+        ;
+    }).then((data) => {
+      setUserState(data)
+      Swal.fire(
+        'Good job!',
+        'Se recibio la informacion correctamente',
+        'success'
+      )
+    }).catch(
+      () => console.log('Error al cargar el rastreo ')
+    )
+
+
+  }, [urlinfo]);
+
   return (
     <>
-    {console.log('padre' + datos)}
-    <localContext.Provider value={datos}>
+    <userContext.Provider value={userState}>
       <HooksContext2></HooksContext2>
-    </localContext.Provider>
+    </userContext.Provider>
     </>
 
   )
