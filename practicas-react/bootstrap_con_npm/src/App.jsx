@@ -2,7 +2,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-import FuentesGoogle from './componentes/FuentesGoogle';
+import UserPracticaContext from './PracticaContext/UserPracticaContext';
+/* import FuentesGoogle from './componentes/FuentesGoogle';
 import ComponenteClassSintaxis from './componentes/ComponenteClassSintaxis';
 import ComponenteFunctionSintaxis from './componentes/ComponenteFunctionSintaxis';
 import ComponenteArrowSintaxis from './componentes/ComponenteArrowSintaxis';
@@ -13,11 +14,12 @@ import ManejodeEventosClass from './componentes/ManejodeEventosClass';
 import Hooks from './componentes/Hooks';
 import HooksEffect from './componentes/HooksEffect';
 import HooksContext from './componentes/HooksContext';
+import UserPracticaContext from './PracticaContext/UserPracticaContext'; */
 
 function App() {
-  let max_art=5
+  /* let max_art=5 */
   return (
-    <div className="App">
+   /*  <div className="App">
       <div className="container">
         <div className="row">
           <div className="col">hello word</div>
@@ -41,8 +43,12 @@ function App() {
 
       <HooksEffect></HooksEffect>
       <hr/>
-      <HooksContext></HooksContext>
-    </div>
+      <HooksContext></HooksContext> 
+       </div> */
+   <>
+   <UserPracticaContext></UserPracticaContext>
+   </>
+  
   );
 }
 

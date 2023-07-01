@@ -1,8 +1,11 @@
 {
-    "Data": [
+    "status": 200,
+    "descripcion": "ok",
+    "destinos": [
         {
+            "id":"1",
             "destino": "Guadalajara",
-            "nombre": "Jalisco",
+            "estado": "Jalisco",
             "total_mt3_distino": 279,
             "mt3_por_destino": {
                 "_comentario": "Este arreglo representa todos los mt3 que el origen por destino",
@@ -22,6 +25,7 @@
                     "guias_hoy": [
                         {
                             "numguia": "per-5160",
+                            "status":"2",
                             "tipo": "paqueteria",
                             "url_rastreo": "http://216.250.126.250/Rastreo_Get_Guias/gts-5160",
                             "peso": 0,
@@ -34,8 +38,9 @@
             ]
         },
         {
+            "id":"2",
             "destino": "Guadalajara",
-            "nombre": "Jalisco",
+            "estado": "Jalisco",
             "total_mt3_distino": 279,
             "mt3_por_destino": {
                 "_comentario": "Este arreglo representa todos los mt3 que el origen por destino",
@@ -54,11 +59,12 @@
                     },
                     "guias_hoy": [
                         {
-                            "numguia": "per-5160",
+                            "numguia": "gua-5160",
+                            "status":"2",
                             "tipo": "paqueteria",
                             "url_rastreo": "http://216.250.126.250/Rastreo_Get_Guias/gts-5160",
-                            "peso": "0",
-                            "mt3": "0",
+                            "peso": 0,
+                            "mt3": 0,
                             "cantidad_envios": 10
                         }
                     ],
