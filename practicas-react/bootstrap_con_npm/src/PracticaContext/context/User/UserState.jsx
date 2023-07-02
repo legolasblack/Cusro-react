@@ -8,6 +8,7 @@ const UserState= () =>{
         SelectedUser:null
      }
      
+     const  
     /* Constructor e inicializacion de variables */
     
     
